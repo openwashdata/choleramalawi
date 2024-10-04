@@ -52,8 +52,6 @@ library(readr)
 library(stringr)
 library(gt)
 library(kableExtra)
-library(ggplot2)
-devtools::load_all()
 ```
 
 Alternatively, you can download the individual datasets as a CSV or XLSX
@@ -112,25 +110,9 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ```{r}
 library(choleramalawi)
 
-# Total Cases by District (Top 5)
-choleramalawi |> 
-  group_by(district) |> 
-  summarise(tot_cases = sum(cases, na.rm = TRUE)) |>
-  arrange(desc(tot_cases)) |>
-  head(5) |>
-  gt() |>
-  as_raw_html()
+# Provide some example code here
 ```
 
-```{r}
-# Plot cases by week in the district of Lilongwe
-choleramalawi |> 
-  filter(district == "Lilongwe") |> 
-  ggplot2::ggplot(aes(x = week, y = cases)) +
-  ggplot2::geom_line() +
-  ggplot2::labs(title = "Cholera Cases in Lilongwe", x = "Week", y = "Cases") +
-  ggplot2::theme_minimal()
-```
 
 ## License
 
