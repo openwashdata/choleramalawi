@@ -52,6 +52,7 @@ library(readr)
 library(stringr)
 library(gt)
 library(kableExtra)
+devtools::load_all()
 ```
 
 Alternatively, you can download the individual datasets as a CSV or XLSX
@@ -110,7 +111,29 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ```{r}
 library(choleramalawi)
 
-# Provide some example code here
+# Top districts by total cases
+
+choleramalawi |>
+  group_by(district) |>
+  summarise(total_cases = sum(cases, na.rm = TRUE)) |>
+  arrange(desc(total_cases)) |>
+  head(10) |>
+  gt() |>
+  as_raw_html()
+```
+
+```{r}
+# Plotting the number of cases over time in Lilongwe district
+
+library(ggplot2)
+
+choleramalawi |>
+  filter(district == "Lilongwe") |>
+  ggplot(aes(x = week, y = cases)) +
+  geom_line() +
+  labs(title = "Number of cases over time in Lilongwe district",
+       x = "Week",
+       y = "Cases")
 ```
 
 
