@@ -1,0 +1,9 @@
+directory,file_name,variable_name,variable_type,description
+data,choleramalawi.rda,epi_week,character,Week of the epidemic
+data,choleramalawi.rda,week_start,character,Week of the year
+data,choleramalawi.rda,week,double,Date for the week
+data,choleramalawi.rda,cases,character,No. of recorded cases
+data,choleramalawi.rda,deaths,character,No. of recorded deaths
+data,choleramalawi.rda,c_cases,character,Cumulative cases since the start of the epidemic
+data,choleramalawi.rda,c_deaths,character,Cumulative deaths since the start of the epidemic
+data,choleramalawi.rda,district,character,District of Malawi for which the record is collected

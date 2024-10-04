@@ -1,0 +1,146 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# choleramalawi
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+The goal of choleramalawi is to ...
+
+## Installation
+
+You can install the development version of choleramalawi from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/choleramalawi")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+library(ggplot2)
+devtools::load_all()
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to ...
+
+```{r}
+library(choleramalawi)
+```
+
+### choleramalawi
+
+The dataset `choleramalawi` contains data about ...
+It has `r nrow(choleramalawi)` observations and `r ncol(choleramalawi)` variables
+
+```{r}
+choleramalawi |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "choleramalawi.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+
+## Example
+
+```{r}
+library(choleramalawi)
+
+# Total Cases by District (Top 5)
+choleramalawi |> 
+  group_by(district) |> 
+  summarise(tot_cases = sum(cases, na.rm = TRUE)) |>
+  arrange(desc(tot_cases)) |>
+  head(5) |>
+  gt() |>
+  as_raw_html()
+```
+
+```{r}
+# Plot cases by week in the district of Lilongwe
+choleramalawi |> 
+  filter(district == "Lilongwe") |> 
+  ggplot2::ggplot(aes(x = week, y = cases)) +
+  ggplot2::geom_line() +
+  ggplot2::labs(title = "Cholera Cases in Lilongwe", x = "Week", y = "Cases") +
+  ggplot2::theme_minimal()
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/choleramalawi/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("choleramalawi")
+```
