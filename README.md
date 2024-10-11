@@ -10,7 +10,7 @@
 
 <!-- badges: end -->
 
-The goal of choleramalawi is to track the progress of the Cholera epidemic in Malawi (2023-24)
+The goal of choleramalawi is to track the progress of the Cholera epidemic in Malawi (2022-23)
 
 ## Installation
 
