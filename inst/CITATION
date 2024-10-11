@@ -1,0 +1,12 @@
+
+bibentry(bibtype = "Misc",
+         key = "maintainer_etall",
+         title = "choleramalawi: What the Package Does (Title Case)",
+         author = c(person(given = "The package",
+                           family = "maintainer",
+                           email = "yourself@somewhere.net"),
+                    person(given = "Who wrote",
+                           family = "it")),
+         doi = "10.5281/zenodo.13920530",
+         abstract = "More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.",
+         version = "0.1.0")
