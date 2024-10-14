@@ -39,7 +39,7 @@ The goal of choleramalawi is to analyse the progress of the Cholera epidemic in 
 You can install the development version of choleramalawi from
 [GitHub](https://github.com/) with:
 
-``` r
+``` {r}
 # install.packages("devtools")
 devtools::install_github("openwashdata/choleramalawi")
 ```
@@ -53,7 +53,11 @@ library(readr)
 library(stringr)
 library(gt)
 library(kableExtra)
-devtools::load_all()
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(sf)
+library(RColorBrewer)
+#devtools::load_all()
 ```
 
 Alternatively, you can download the individual datasets as a CSV or XLSX
@@ -135,6 +139,25 @@ choleramalawi |>
   labs(title = "Number of cases over time in Lilongwe district",
        x = "Week",
        y = "Cases")
+```
+
+```{r}
+# Plot a map of districts of Malawi colored by the number of cases
+total_cases_district <- choleramalawi |>
+  group_by(district) |>
+  summarise(total_cases = sum(cases, na.rm = TRUE)) |> 
+  mutate(total_cases = ifelse(is.na(total_cases), 0, total_cases))
+malawi_map <- ne_states(country = "Malawi", returnclass = "sf")
+
+malawi_map <- malawi_map %>%
+  left_join(total_cases_district, by = c("name" = "district"))
+
+ggplot(malawi_map) +
+  geom_sf(aes(fill = total_cases)) +
+  scale_fill_viridis_c(guide="none") + 
+  theme_void() +
+  labs(title = "Cholera Cases by District in Malawi")
+
 ```
 
 
