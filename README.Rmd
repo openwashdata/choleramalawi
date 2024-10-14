@@ -85,7 +85,7 @@ library(choleramalawi)
 
 ### choleramalawi
 
-The dataset `choleramalawi` contains data about ...
+The dataset `choleramalawi` contains data about the progress of the cholera epidemic in Malawi (2022-23).
 It has `r nrow(choleramalawi)` observations and `r ncol(choleramalawi)` variables
 
 ```{r}

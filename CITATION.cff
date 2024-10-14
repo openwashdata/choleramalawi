@@ -6,11 +6,10 @@
 cff-version: 1.2.0
 message: 'To cite package "choleramalawi" in publications use:'
 type: software
-title: 'choleramalawi: What the Package Does (Title Case)'
+title: 'choleramalawi: Progress Of Cholera Epidemic in Malawi 2022-23'
 version: 0.1.0
 doi: 10.5281/zenodo.13920530
-abstract: More about what it does (maybe more than one line) Use four spaces when
-  indenting paragraphs within the Description.
+abstract: A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.
 authors:
 - family-names: Dubey
   given-names: Yash
