@@ -39,7 +39,7 @@ The goal of choleramalawi is to analyse the progress of the Cholera epidemic in 
 You can install the development version of choleramalawi from
 [GitHub](https://github.com/) with:
 
-``` {r}
+``` {r message=FALSE, warning=FALSE}
 # install.packages("devtools")
 devtools::install_github("openwashdata/choleramalawi")
 ```
