@@ -81,7 +81,7 @@ read_csv("data-raw/dictionary.csv") |>
 
 ## Data
 
-The package provides access to ...
+The package provides access to one dataset `choleramalawi`. It contains data on the progress of the cholera epidemic in each district of Malawi during 2022-23. The data focuses on cases and deaths for every week as well as cumulative cases and deaths.
 
 ```{r}
 library(choleramalawi)
