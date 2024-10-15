@@ -23,9 +23,9 @@ You can install the development version of choleramalawi from
 # install.packages("devtools")
 devtools::install_github("openwashdata/choleramalawi")
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de92084a8cf/openwashdata-choleramalawi-7e8def2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de92084a8cf/openwashdata-choleramalawi-7e8def2/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/q2/thf5k95955q8kn6twjrwljbr00jms0/T/RtmpZReeQh/remotese049e293447/openwashdata-choleramalawi-7e8def2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/q2/thf5k95955q8kn6twjrwljbr00jms0/T/RtmpZReeQh/remotese049e293447/openwashdata-choleramalawi-7e8def2/DESCRIPTION’
 #>   ─  preparing ‘choleramalawi’:
-#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+#>      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
 #>   ─  checking for empty or unneeded directories
 #>   ─  building ‘choleramalawi_0.1.0.tar.gz’
@@ -59,7 +59,10 @@ file from the table below.
 
 ## Data
 
-The package provides access to …
+The package provides access to one dataset `choleramalawi`. It contains
+data on the progress of the cholera epidemic in each district of Malawi
+during 2022-23. The data focuses on cases and deaths for every week as
+well as cumulative cases and deaths.
 
 ``` r
 library(choleramalawi)
@@ -78,7 +81,7 @@ choleramalawi |>
   gt::as_raw_html()
 ```
 
-<div id="fpepvzunnv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="epeonpfzgt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -126,7 +129,7 @@ For an overview of the variable names, see the following table.
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
-<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
@@ -250,7 +253,7 @@ choleramalawi |>
   as_raw_html()
 ```
 
-<div id="inggfzjvno" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="dmggcbaqnz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -307,16 +310,6 @@ total_cases_district <- choleramalawi |>
   summarise(total_cases = sum(cases, na.rm = TRUE)) |> 
   mutate(total_cases = ifelse(is.na(total_cases), 0, total_cases))
 malawi_map <- ne_states(country = "Malawi", returnclass = "sf")
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de91df78241/ropensci-rnaturalearthhires-e02c28d/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de91df78241/ropensci-rnaturalearthhires-e02c28d/DESCRIPTION’
-#>   ─  preparing ‘rnaturalearthhires’:
-#>      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘rnaturalearthhires_1.0.0.9000.tar.gz’
-#>      Warning: invalid uid value replaced by that for user 'nobody'
-#>      
-#> 
 
 malawi_map <- malawi_map %>%
   left_join(total_cases_district, by = c("name" = "district"))

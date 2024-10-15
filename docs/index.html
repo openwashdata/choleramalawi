@@ -4,58 +4,48 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What the Package Does (Title Case) • choleramalawi</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="What the Package Does (Title Case)">
-<meta property="og:description" content="More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Tracks the progress of Cholera epidemic in Malawi (2022-23) • choleramalawi</title>
+<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Tracks the progress of Cholera epidemic in Malawi (2022-23)">
+<meta name="description" content="A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.">
+<meta property="og:description" content="A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.">
+<script defer data-domain="openwashdata.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <div class="container template-home">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">choleramalawi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
-      </span>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="reference/index.html">Reference</a>
-</li>
+    <a class="navbar-brand me-2" href="index.html">choleramalawi</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
+</form></li>
+      </ul>
 </div>
-<!--/.nav-collapse -->
+
+
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
-
-
-
-      </header><div class="row">
-  <div class="contents col-md-9">
-<div class="section level1">
+</nav><div class="container template-home">
+<div class="row">
+  <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="choleramalawi">choleramalawi<a class="anchor" aria-label="anchor" href="#choleramalawi"></a>
 </h1></div>
 <!-- badges: start -->
@@ -70,9 +60,9 @@
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"openwashdata/choleramalawi"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── R CMD build ─────────────────────────────────────────────────────────────────</span></span>
-<span><span class="co">#&gt;      checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de92084a8cf/openwashdata-choleramalawi-7e8def2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de92084a8cf/openwashdata-choleramalawi-7e8def2/DESCRIPTION’</span></span>
+<span><span class="co">#&gt;      checking for file ‘/private/var/folders/q2/thf5k95955q8kn6twjrwljbr00jms0/T/RtmpZReeQh/remotese049e293447/openwashdata-choleramalawi-7e8def2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/q2/thf5k95955q8kn6twjrwljbr00jms0/T/RtmpZReeQh/remotese049e293447/openwashdata-choleramalawi-7e8def2/DESCRIPTION’</span></span>
 <span><span class="co">#&gt;   ─  preparing ‘choleramalawi’:</span></span>
-<span><span class="co">#&gt;    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information</span></span>
+<span><span class="co">#&gt;      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information</span></span>
 <span><span class="co">#&gt;   ─  checking for LF line-endings in source and make files and shell scripts</span></span>
 <span><span class="co">#&gt;   ─  checking for empty or unneeded directories</span></span>
 <span><span class="co">#&gt;   ─  building ‘choleramalawi_0.1.0.tar.gz’</span></span>
@@ -107,15 +97,15 @@
 </tr></thead>
 <tbody><tr class="odd">
 <td align="left">choleramalawi</td>
-<td align="left"><a href="https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/choleramalawi.csv" class="external-link">Download CSV</a></td>
-<td align="left"><a href="https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/choleramalawi.xlsx" class="external-link">Download XLSX</a></td>
+<td align="left"><a href="https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/choleramalawi.csv">Download CSV</a></td>
+<td align="left"><a href="https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/choleramalawi.xlsx">Download XLSX</a></td>
 </tr></tbody>
 </table>
 </div>
 <div class="section level2">
 <h2 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
 </h2>
-<p>The package provides access to …</p>
+<p>The package provides access to one dataset <code>choleramalawi</code>. It contains data on the progress of the cholera epidemic in each district of Malawi during 2022-23. The data focuses on cases and deaths for every week as well as cumulative cases and deaths.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">choleramalawi</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
@@ -127,7 +117,7 @@
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/as_raw_html.html" class="external-link">as_raw_html</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div id="fpepvzunnv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="epeonpfzgt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
@@ -241,7 +231,7 @@ Balaka
 </div>
 <p>For an overview of the variable names, see the following table.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
-<table class="table table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 variable_name
@@ -362,7 +352,7 @@ District of Malawi for which the record is collected
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/as_raw_html.html" class="external-link">as_raw_html</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div id="inggfzjvno" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="dmggcbaqnz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
@@ -478,16 +468,6 @@ Thyolo
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>total_cases <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">cases</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>total_cases <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">total_cases</span><span class="op">)</span>, <span class="fl">0</span>, <span class="va">total_cases</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">malawi_map</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_states.html" class="external-link">ne_states</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"Malawi"</span>, returnclass <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ── R CMD build ─────────────────────────────────────────────────────────────────</span></span>
-<span><span class="co">#&gt;      checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de91df78241/ropensci-rnaturalearthhires-e02c28d/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/w1/hdpqy_cn6x91v83z7xdg_8dr00hq0z/T/RtmpFk1UrO/remotes6de91df78241/ropensci-rnaturalearthhires-e02c28d/DESCRIPTION’</span></span>
-<span><span class="co">#&gt;   ─  preparing ‘rnaturalearthhires’:</span></span>
-<span><span class="co">#&gt;      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information</span></span>
-<span><span class="co">#&gt;   ─  checking for LF line-endings in source and make files and shell scripts</span></span>
-<span><span class="co">#&gt;   ─  checking for empty or unneeded directories</span></span>
-<span><span class="co">#&gt;   ─  building ‘rnaturalearthhires_1.0.0.9000.tar.gz’</span></span>
-<span><span class="co">#&gt;      Warning: invalid uid value replaced by that for user 'nobody'</span></span>
-<span><span class="co">#&gt;      </span></span>
-<span><span class="co">#&gt; </span></span>
 <span></span>
 <span><span class="va">malawi_map</span> <span class="op">&lt;-</span> <span class="va">malawi_map</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">total_cases_district</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"name"</span> <span class="op">=</span> <span class="st">"district"</span><span class="op">)</span><span class="op">)</span></span>
@@ -502,7 +482,7 @@ Thyolo
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
 </h2>
-<p>Data are available as <a href="https://github.com/openwashdata/choleramalawi/blob/main/LICENSE.md" class="external-link">CC-BY</a>.</p>
+<p>Data are available as <a href="https://github.com/openwashdata/choleramalawi/blob/main/LICENSE.md">CC-BY</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
@@ -530,17 +510,12 @@ Thyolo
 <span><span class="co">#&gt;   }</span></span></code></pre></div>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="license">
-<h2 data-toc-skip>License</h2>
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://creativecommons.org/licenses/by/4.0" class="external-link">CC BY 4.0</a></small></li>
+<li><a href="https://github.com/openwashdata/choleramalawi">GitHub repository</a></li>
 </ul>
 </div>
-
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -552,7 +527,9 @@ Thyolo
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>The package maintainer <br><small class="roles"> Maintainer </small>  </li>
+<li>So <em>who</em> does the work?</li>
+<li>Yash Dubey <br><small class="roles"> Maintainer </small>  </li>
+<li>Thanks all!</li>
 </ul>
 </div>
 
@@ -563,23 +540,27 @@ Thyolo
 </ul>
 </div>
 
-  </div>
+<div class="funding">
+<h2 data-toc-skip>Funding</h2>
+<ul class="list-unstyled">
+<li><p>This project was funded by the <a href="https://ethrat.ch/en/eth-domain/open-research-data/" class="external-link">Open Research Data Program of the ETH Board</a>.</p></li>
+</ul>
+</div>
+
+  </aside>
 </div>
 
 
-      <footer><div class="copyright">
-  <p></p>
-<p>Developed by The package maintainer.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p>Crafted by Yash Dubey.</p>
 </div>
 
-<div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+<div class="pkgdown-footer-right">
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
-
 
 
 
