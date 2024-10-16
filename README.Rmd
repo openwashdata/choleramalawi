@@ -30,6 +30,7 @@ knitr::opts_chunk$set(
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13920530.svg)](https://zenodo.org/doi/10.5281/zenodo.13920530)
+
 <!-- badges: end -->
 
 The goal of choleramalawi is to analyse the progress of the Cholera epidemic in Malawi (2023-24)
@@ -39,7 +40,7 @@ The goal of choleramalawi is to analyse the progress of the Cholera epidemic in 
 You can install the development version of choleramalawi from
 [GitHub](https://github.com/) with:
 
-``` {r message=FALSE, warning=FALSE}
+``` {r eval=FALSE}
 # install.packages("devtools")
 devtools::install_github("openwashdata/choleramalawi")
 ```
