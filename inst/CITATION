@@ -11,4 +11,4 @@ bibentry(bibtype = "Misc",
          url = "https://github.com/openwashdata/choleramalawi",
          abstract = "A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.",
          keywords = "open data,washdata,cholera,epidemic,disease surveillance,public health,Malawi",
-         version = "0.1.0")
+         version = "1.0.1")
