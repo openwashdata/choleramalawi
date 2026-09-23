@@ -2,12 +2,19 @@ Package: choleramalawi
 Type: Package
 Title: Tracks the progress of Cholera epidemic in Malawi (2022-23)
 Version: 0.1.0
-Author: Yash Dubey
-Maintainer: Yash Dubey <ydubey@ethz.ch>
+Authors@R: 
+    person("Yash", "Dubey", , "ydubey@ethz.ch", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0001-2849-970X"))
 Description: A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 2.10)
-RoxygenNote: 7.3.2
+Date: 2024-10-11
+URL: https://github.com/openwashdata/choleramalawi
+BugReports: https://github.com/openwashdata/choleramalawi/issues
+X-schema.org-keywords: open data, washdata, cholera, epidemic, disease surveillance, public health, Malawi
+X-schema.org-spatialCoverage: Malawi
+X-schema.org-temporalCoverage: 2022-02-28/2023-10-29
+Config/roxygen2/version: 8.0.0
