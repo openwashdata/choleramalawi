@@ -1,35 +1,36 @@
-# --------------------------------------------
-# CITATION file created with {cffr} R package
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
 # See also: https://docs.ropensci.org/cffr/
-# --------------------------------------------
-
+# ------------------------------------------------
+ 
 cff-version: 1.2.0
 message: 'To cite package "choleramalawi" in publications use:'
-type: software
-title: 'choleramalawi: Progress Of Cholera Epidemic in Malawi 2022-23'
-version: 0.1.0
-doi: 10.5281/zenodo.13920530
-abstract: A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.
+type: dataset
+license: CC-BY-4.0
+title: 'choleramalawi: Tracks the progress of Cholera epidemic in Malawi (2022-23)'
+version: 1.0.1
+doi: 10.5281/zenodo.13920529
+abstract: A dataset that tracks the progress of the cholera epidemic in each district
+  of Malawi in 2022-23.
 authors:
 - family-names: Dubey
   given-names: Yash
   email: ydubey@ethz.ch
   orcid: https://orcid.org/0009-0001-2849-970X
+repository-code: https://github.com/openwashdata/choleramalawi
+url: https://github.com/openwashdata/choleramalawi
+date-released: '2024-10-11'
 contact:
 - family-names: Dubey
   given-names: Yash
   email: ydubey@ethz.ch
   orcid: https://orcid.org/0009-0001-2849-970X
-references:
-- type: software
-  title: 'R: A Language and Environment for Statistical Computing'
-  notes: Depends
-  url: https://www.R-project.org/
-  authors:
-  - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2023'
-  institution:
-    name: R Foundation for Statistical Computing
-  version: '>= 2.10'
+keywords:
+- open data
+- washdata
+- cholera
+- epidemic
+- disease surveillance
+- public health
+- Malawi
+

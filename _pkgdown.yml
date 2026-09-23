@@ -1,5 +1,4 @@
-
-url: https://github.com/openwashdata/choleramalawi
+url: https://openwashdata.github.io/choleramalawi/
 template:
   bootstrap: 5
   includes:
