@@ -1,12 +1,14 @@
 
 bibentry(bibtype = "Misc",
-         key = "Dubey Y (2024)",
-         title = "choleramalawi: Progress Of Cholera Epidemic in Malawi 2022-23",
-         author = c(person(given = "Yash",
-                           family = "Dubey",
-                           email = "ydubey@ethz.ch")),
+         key = "dubey:2024",
+         title = "choleramalawi: Tracks the progress of Cholera epidemic in Malawi (2022-23)",
+         author = person(given = "Yash",
+                         family = "Dubey",
+                         email = "ydubey@ethz.ch",
+                         comment = c(ORCID = "0009-0001-2849-970X")),
          year = "2024",
+         doi = "10.5281/zenodo.13920529",
          url = "https://github.com/openwashdata/choleramalawi",
-         doi = "10.5281/zenodo.13920530",
          abstract = "A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.",
-         version = "0.1.0")
+         keywords = "open data,washdata,cholera,epidemic,disease surveillance,public health,Malawi",
+         version = "1.0.1")
