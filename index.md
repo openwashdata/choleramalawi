@@ -169,16 +169,16 @@ Please cite this package using:
 citation("choleramalawi")
 #> To cite package 'choleramalawi' in publications use:
 #> 
-#>   Dubey Y (2024). "choleramalawi: Tracks the progress of Cholera
-#>   epidemic in Malawi (2022-23)." doi:10.5281/zenodo.13920529
+#>   Dubey Y, Schöbitz L (2024). "choleramalawi: Tracks the progress of
+#>   Cholera epidemic in Malawi (2022-23)." doi:10.5281/zenodo.13920529
 #>   <https://doi.org/10.5281/zenodo.13920529>.
 #>   <https://github.com/openwashdata/choleramalawi>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{dubey:2024,
+#>   @Misc{dubey_etall:2024,
 #>     title = {choleramalawi: Tracks the progress of Cholera epidemic in Malawi (2022-23)},
-#>     author = {Yash Dubey},
+#>     author = {Yash Dubey and Lars Schöbitz},
 #>     year = {2024},
 #>     doi = {10.5281/zenodo.13920529},
 #>     url = {https://github.com/openwashdata/choleramalawi},
