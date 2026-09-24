@@ -17,14 +17,18 @@ authors:
   given-names: Yash
   email: ydubey@ethz.ch
   orcid: https://orcid.org/0009-0001-2849-970X
+- family-names: Schöbitz
+  given-names: Lars
+  email: lschoebitz@ethz.ch
+  orcid: https://orcid.org/0000-0003-2196-5015
 repository-code: https://github.com/openwashdata/choleramalawi
 url: https://github.com/openwashdata/choleramalawi
 date-released: '2024-10-11'
 contact:
-- family-names: Dubey
-  given-names: Yash
-  email: ydubey@ethz.ch
-  orcid: https://orcid.org/0009-0001-2849-970X
+- family-names: Schöbitz
+  given-names: Lars
+  email: lschoebitz@ethz.ch
+  orcid: https://orcid.org/0000-0003-2196-5015
 keywords:
 - open data
 - washdata
