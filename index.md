@@ -1,0 +1,189 @@
+# choleramalawi
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13920529.svg)](https://zenodo.org/doi/10.5281/zenodo.13920529)
+
+[![R-CMD-check](https://github.com/openwashdata/choleramalawi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/choleramalawi/actions/workflows/R-CMD-check.yaml)
+
+The goal of choleramalawi is to analyse the progress of the cholera
+epidemic in Malawi (2022-23)
+
+## Installation
+
+You can install the development version of choleramalawi from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# install.packages("devtools")
+devtools::install_github("openwashdata/choleramalawi")
+```
+
+``` r
+
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(sf)
+library(RColorBrewer)
+#devtools::load_all()
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+| dataset | CSV | XLSX |
+|:---|:---|:---|
+| choleramalawi | [Download CSV](https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/choleramalawi.csv) | [Download XLSX](https://github.com/openwashdata/choleramalawi/raw/main/inst/extdata/choleramalawi.xlsx) |
+
+## Data
+
+The package provides access to one dataset `choleramalawi`. It contains
+data on the progress of the cholera epidemic in each district of Malawi
+during 2022-23. The data focuses on cases and deaths for every week as
+well as cumulative cases and deaths.
+
+``` r
+
+library(choleramalawi)
+```
+
+### choleramalawi
+
+The dataset `choleramalawi` contains data about the progress of the
+cholera epidemic in Malawi (2022-23). It has 1886 observations and 8
+variables
+
+``` r
+
+choleramalawi |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+| epi_week | week_start |       week | cases | deaths | c_cases | c_deaths | district |
+|---------:|-----------:|-----------:|------:|-------:|--------:|---------:|:---------|
+|       21 |         13 | 2022-05-23 |     9 |      1 |       9 |        1 | Balaka   |
+|       22 |         14 | 2022-05-30 |     2 |      0 |      11 |        1 | Balaka   |
+|       23 |         15 | 2022-06-06 |    10 |      2 |      21 |        2 | Balaka   |
+
+For an overview of the variable names, see the following table.
+
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| epi_week | character | Epidemiological week of the calendar year (1 to 52) |
+| week_start | character | Week number counted from the first week in the data (week 1 starts on 2022-02-28) |
+| week | Date | Start date (Monday) of the week |
+| cases | numeric | No. of recorded cases |
+| deaths | numeric | No. of recorded deaths |
+| c_cases | numeric | Cumulative cases since the start of the epidemic |
+| c_deaths | numeric | Cumulative deaths since the start of the epidemic |
+| district | character | District of Malawi for which the record is collected |
+
+## Example
+
+``` r
+
+library(choleramalawi)
+
+# Top districts by total cases
+
+choleramalawi |>
+  group_by(district) |>
+  summarise(total_cases = sum(cases, na.rm = TRUE)) |>
+  arrange(desc(total_cases)) |>
+  head(10) |>
+  gt() |>
+  as_raw_html()
+```
+
+| district  | total_cases |
+|:----------|------------:|
+| Lilongwe  |       12707 |
+| Blantyre  |        8997 |
+| Mangochi  |        8194 |
+| Balaka    |        4132 |
+| Salima    |        3599 |
+| Machinga  |        2719 |
+| Dedza     |        2124 |
+| Ntcheu    |        1937 |
+| Nkhatabay |        1628 |
+| Thyolo    |        1532 |
+
+``` r
+
+# Plotting the number of cases over time in Lilongwe district
+
+library(ggplot2)
+
+choleramalawi |>
+  filter(district == "Lilongwe") |>
+  ggplot(aes(x = week, y = cases)) +
+  geom_line() +
+  labs(title = "Number of cases over time in Lilongwe district",
+       x = "Week",
+       y = "Cases")
+```
+
+![](reference/figures/README-unnamed-chunk-9-1.png)
+
+``` r
+
+# Plot a map of districts of Malawi colored by the number of cases
+total_cases_district <- choleramalawi |>
+  group_by(district) |>
+  summarise(total_cases = sum(cases, na.rm = TRUE)) |> 
+  mutate(total_cases = ifelse(is.na(total_cases), 0, total_cases))
+malawi_map <- ne_states(country = "Malawi", returnclass = "sf")
+
+malawi_map <- malawi_map %>%
+  left_join(total_cases_district, by = c("name" = "district"))
+
+ggplot(malawi_map) +
+  geom_sf(aes(fill = total_cases)) +
+  scale_fill_viridis_c(guide="none") + 
+  theme_void() +
+  labs(title = "Cholera Cases by District in Malawi")
+```
+
+![](reference/figures/README-unnamed-chunk-10-1.png)
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/choleramalawi/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+``` r
+
+citation("choleramalawi")
+#> To cite package 'choleramalawi' in publications use:
+#> 
+#>   Dubey Y (2024). "choleramalawi: Tracks the progress of Cholera
+#>   epidemic in Malawi (2022-23)." doi:10.5281/zenodo.13920529
+#>   <https://doi.org/10.5281/zenodo.13920529>.
+#>   <https://github.com/openwashdata/choleramalawi>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{dubey:2024,
+#>     title = {choleramalawi: Tracks the progress of Cholera epidemic in Malawi (2022-23)},
+#>     author = {Yash Dubey},
+#>     year = {2024},
+#>     doi = {10.5281/zenodo.13920529},
+#>     url = {https://github.com/openwashdata/choleramalawi},
+#>     abstract = {A dataset that tracks the progress of the cholera epidemic in each district of Malawi in 2022-23.},
+#>     keywords = {open data,washdata,cholera,epidemic,disease surveillance,public health,Malawi},
+#>     version = {1.0.1},
+#>   }
+```
