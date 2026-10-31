@@ -4,6 +4,8 @@
 
 [![R-CMD-check](https://github.com/openwashdata/choleramalawi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/choleramalawi/actions/workflows/R-CMD-check.yaml)
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 The goal of choleramalawi is to analyse the progress of the cholera
 epidemic in Malawi (2022-23)
 
