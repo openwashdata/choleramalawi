@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# choleramalawi
+# choleramalawi <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -12,8 +12,6 @@
 
 [![R-CMD-check](https://github.com/openwashdata/choleramalawi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/choleramalawi/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 The goal of choleramalawi is to analyse the progress of the cholera
 epidemic in Malawi (2022-23)
@@ -399,6 +397,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/choleramalawi/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
